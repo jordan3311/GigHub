@@ -8,7 +8,7 @@ namespace GigHub.ViewModels
         public string Venue { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
-        public int Genre { get; set; }
+        public byte Genre { get; set; }
 
         //added for a drop list used IEnumable because we are not changing thes list 
         public IEnumerable<Genre> Genres { get; set; } 
