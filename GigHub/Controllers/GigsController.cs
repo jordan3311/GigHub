@@ -31,11 +31,16 @@ namespace GigHub.Controllers
         {
             //Reading data from the data base 
             var artisId = User.Identity.GetUserId();
-           
+            if (!ModelState.IsValid)
+            {
+                viewModel.Genres = _context.Genres.ToList();
+                return View("Create", viewModel);
+            }
+                
             var gig = new Gig
             {
                 ArtistId = artisId,
-                DateTime = viewModel.DateTime,
+                DateTime = viewModel.GetDateTime(),
                 GenreId = viewModel.Genre,
                 Venue = viewModel.Venue
             };
