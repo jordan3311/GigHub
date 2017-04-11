@@ -27,6 +27,7 @@ namespace GigHub.Controllers
 
         [Authorize]
         [HttpPost] //only called via http post method 
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GigFormViewModel viewModel)
         {
             //Reading data from the data base 
