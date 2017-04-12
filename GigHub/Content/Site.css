@@ -37,6 +37,24 @@ textarea {
 .navbar-inverse .navbar-brand {
     color: #ffffff;
 }
+/*Changing the nav bars color when selected (right side) */
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    
+    background-color: rgba(205,40,39,0.55);
+}
+
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+.navbar-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
 body,
 h1,
 h2,
@@ -52,4 +70,11 @@ h6,
 .h6 {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   
+}
+/*Taking hover off of these*/
+.form-control:focus{
+    border-color: #2196f3;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+
 }
