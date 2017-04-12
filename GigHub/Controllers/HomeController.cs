@@ -16,9 +16,10 @@ namespace GigHub.Controllers
         }
         public ActionResult Index()
         {
-            //Adding a list of gigs that the artist is going to 
+            //Adding a list of gigs that the artist is going to this is eager loading 
             var upcomingGigs = _context.Gigs
                 .Include(g => g.Artist)
+                .Include(g => g.Genre)
                 .Where(g => g.DateTime > DateTime.Now);
             return View(upcomingGigs);
         }
