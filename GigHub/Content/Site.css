@@ -22,7 +22,11 @@ select,
 textarea {
     max-width: 280px;
 }
-
+/*Changed the validation error message color */
+span.field-validation-error {
+    color: red;
+    font-weight: bold;
+}
 /*Bootstrap Overrides*/
 .navbar-inverse{
     background-color: #ff4342;
